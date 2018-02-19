@@ -34,7 +34,7 @@ import java.util.Date;
 public class RegistraVoce extends AppCompatActivity{
 
     private static final String LOG_TAG = "AudioRecordTest";
-    private static final int REQUEST_AUDIO_STORAGE = 200;
+    private static final int REQUEST_AUDIO_AND_STORAGE = 200;
     /*private static final int WRITE_EXTERNAL_STORAGE = 201;
     private static final int READ_EXTERNAL_STORAGE = 202;*/
     private String outputPath = null;
@@ -59,7 +59,7 @@ public class RegistraVoce extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registra_voce);
 
-        ActivityCompat.requestPermissions(this, permissions, REQUEST_AUDIO_STORAGE);
+        ActivityCompat.requestPermissions(this, permissions, REQUEST_AUDIO_AND_STORAGE);
         /*ActivityCompat.requestPermissions(this, permissions, WRITE_EXTERNAL_STORAGE);
         ActivityCompat.requestPermissions(this, permissions, READ_EXTERNAL_STORAGE);*/
 
@@ -93,7 +93,7 @@ public class RegistraVoce extends AppCompatActivity{
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-            case REQUEST_AUDIO_STORAGE:
+            case REQUEST_AUDIO_AND_STORAGE:
                 permissionToRecordAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 break;
             /*case WRITE_EXTERNAL_STORAGE: {

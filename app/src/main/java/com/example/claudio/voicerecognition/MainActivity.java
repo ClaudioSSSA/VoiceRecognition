@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_riconoscitore) {
-            Intent intent = new Intent(this, riconoscitore.class);
+            Intent intent = new Intent(this, Riconoscitore.class);
             startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.ic_registra) {
