@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.claudio.voicerecognition.RegistraVoce">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="237dp">
+
+        <ImageButton
+            android:id="@+id/recbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:onClick="onClickStartRec"
+            android:padding="20dp"
+            app:srcCompat="@drawable/recbutton" />
+
+
+        <Chronometer
+            android:id="@+id/chrrec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_stop_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#ff0000"
+            android:onClick="onClickStopRec"
+            android:text="Stop"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="237dp">
+
+            <Button
+                android:id="@+id/btn_play_rec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@android:color/holo_green_light"
+                android:onClick="onClickPlayRec"
+                android:text="play"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar4"
+                style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:progressTint="#Ff0000"
+                android:visibility="visible"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
