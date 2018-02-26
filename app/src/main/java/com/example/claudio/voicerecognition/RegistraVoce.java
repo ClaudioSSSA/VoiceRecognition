@@ -120,7 +120,7 @@ public class RegistraVoce extends AppCompatActivity{
             mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
             mRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-
+            String str = "AbozziGay";
             outputFile = Integer.toString(count_files) + "_rec.3gp";
             mRecorder.setOutputFile(outputPath+outputFile);
 
