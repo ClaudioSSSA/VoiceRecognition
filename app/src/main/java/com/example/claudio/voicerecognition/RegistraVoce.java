@@ -68,7 +68,7 @@ public class RegistraVoce extends AppCompatActivity{
         btn_stop_rec.setEnabled(false);
         btn_stop_rec.setBackgroundColor(Color.GRAY);
 
-        String main_folder = "VoiceRecorder";
+        String main_folder = "VoiceRecorderLLLLLLLLLLLLLLl";
 
         File f = new File(Environment.getExternalStorageDirectory(), main_folder);
         if (!f.exists()) {
