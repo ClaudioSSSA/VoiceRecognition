@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistraVoce" />
-        <activity android:name=".Riconoscitore"></activity>
+        <activity android:name=".Riconoscitore" />
     </application>
 
 </manifest>
