@@ -71,7 +71,7 @@ public class RegistraVoce extends AppCompatActivity{
         btn_stop_rec.setEnabled(false);
         btn_stop_rec.setBackgroundColor(Color.GRAY);
 
-
+        String aboz = "string";
 
         String main_folder = "VoiceRecorder";
 
