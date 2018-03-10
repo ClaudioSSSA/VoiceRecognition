@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VoiceRecognition.iml" filepath="$PROJECT_DIR$/VoiceRecognition.iml" />
-      <module fileurl="file://$PROJECT_DIR$/VoiceRecognition2.iml" filepath="$PROJECT_DIR$/VoiceRecognition2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VR.iml" filepath="$PROJECT_DIR$/VR.iml" />
+      <module fileurl="file://C:\Users\Utente10\Desktop\uni\VR\VoiceRecognition.iml" filepath="C:\Users\Utente10\Desktop\uni\VR\VoiceRecognition.iml" />
+      <module fileurl="file://C:\Users\Utente10\Desktop\uni\VR\VoiceRecognition2.iml" filepath="C:\Users\Utente10\Desktop\uni\VR\VoiceRecognition2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Utente10\Desktop\uni\VR\app\app.iml" filepath="C:\Users\Utente10\Desktop\uni\VR\app\app.iml" />
     </modules>
   </component>
 </project>
