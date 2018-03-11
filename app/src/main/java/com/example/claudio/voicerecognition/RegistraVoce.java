@@ -4,13 +4,11 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Environment;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.ActivityCompat;
 import android.os.Bundle;
@@ -22,15 +20,8 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 
-import java.io.FileDescriptor;
-import java.io.IOException;
-import java.util.Date;
-
+import classes.VoiceRecognition;
 import classes.WavRecorder;
 
 public class RegistraVoce extends AppCompatActivity{
@@ -39,7 +30,7 @@ public class RegistraVoce extends AppCompatActivity{
     private static final int REQUEST_AUDIO_AND_STORAGE = 200;
 
     private String outputPath = null;
-    private String outputFile = null;
+    private String outputFile = "prova.wav"; //nome provvisorio
 
     private MediaPlayer mPlayer = null;
 
@@ -68,14 +59,19 @@ public class RegistraVoce extends AppCompatActivity{
         btn_stop_rec.setEnabled(false);
         btn_stop_rec.setBackgroundColor(Color.GRAY);
 
-        String main_folder = "VoiceRecorderLLLLLLLLLLLLLLl";
+        String main_folder = "VoiceRecorder";
 
-        File f = new File(Environment.getExternalStorageDirectory(), main_folder);
+        /**** prova cartella ****/
+        ((VoiceRecognition) this.getApplication()).setFolder("mauro");
+        String voiceFolder = ((VoiceRecognition) this.getApplication()).getFolder();
+        /***********************/
+
+        File f = new File(Environment.getExternalStorageDirectory(), main_folder + "/" + voiceFolder);
         if (!f.exists()) {
             f.mkdirs();
         }
 
-        outputPath = Environment.getExternalStorageDirectory() + "/" + main_folder + "/";
+        outputPath = Environment.getExternalStorageDirectory() + "/" + main_folder + "/" + voiceFolder +"/";
 
 
 
