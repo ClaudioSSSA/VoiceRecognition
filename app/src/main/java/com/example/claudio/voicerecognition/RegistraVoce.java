@@ -71,7 +71,10 @@ public class RegistraVoce extends AppCompatActivity{
             f.mkdirs();
         }
 
+
+
         outputPath = Environment.getExternalStorageDirectory() + "/" + main_folder + "/" + voiceFolder +"/";
+
 
 
 
@@ -108,6 +111,21 @@ public class RegistraVoce extends AppCompatActivity{
         rec.stopRecording();
         crn_rec.stop();
         Toast.makeText(getApplicationContext(), outputPath+outputFile, Toast.LENGTH_LONG).show();
+
+        /***** prova lista cartelle *****/
+        File f = new File(Environment.getExternalStorageDirectory(), "VoiceRecorder");
+        String[] children = f.list();
+        if (children == null) {
+            // Either dir does not exist or is not a directory
+        } else {
+            for (int i=0; i < children.length; i++) {
+                String filename="";
+                filename = filename+" "+children[i];
+                Toast.makeText(getApplicationContext(), "Lista cartelle: "+filename, Toast.LENGTH_LONG).show();
+            }
+        }
+
+        /********************************/
     }
 
     public void onClickPlayRec(View v){
