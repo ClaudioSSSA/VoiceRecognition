@@ -13,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import classes.VoiceRecognition;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -95,5 +99,19 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public void onClickConfirmUser(View v){
+
+        EditText user = (EditText) findViewById(R.id.user);
+        String usr = user.getText().toString();
+
+        if (usr.equals(""))
+            Toast.makeText(getApplicationContext(), "Inserisci uno username valido!", Toast.LENGTH_LONG).show();
+        else{
+            ((VoiceRecognition) this.getApplication()).setFolder(usr);
+            Toast.makeText(getApplicationContext(), "Ciao "+usr, Toast.LENGTH_LONG).show();
+        }
     }
 }

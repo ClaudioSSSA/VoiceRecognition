@@ -20,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.File;
+import java.nio.file.Paths;
 
 import classes.VoiceRecognition;
 import classes.WavRecorder;
@@ -30,7 +31,8 @@ public class RegistraVoce extends AppCompatActivity{
     private static final int REQUEST_AUDIO_AND_STORAGE = 200;
 
     private String outputPath = null;
-    private String outputFile = "prova.wav"; //nome provvisorio
+    private String outputFile = "prova.wav";
+    int numRec = 0;
 
     private MediaPlayer mPlayer = null;
 
@@ -59,24 +61,22 @@ public class RegistraVoce extends AppCompatActivity{
         btn_stop_rec.setEnabled(false);
         btn_stop_rec.setBackgroundColor(Color.GRAY);
 
-        String main_folder = "VoiceRecorder";
+        /*** salvataggio voce nella cartella dell'utente ***/
 
-        /**** prova cartella ****/
-        ((VoiceRecognition) this.getApplication()).setFolder("mauro");
+        String main_folder = "VoiceRecorder";
         String voiceFolder = ((VoiceRecognition) this.getApplication()).getFolder();
-        /***********************/
 
         File f = new File(Environment.getExternalStorageDirectory(), main_folder + "/" + voiceFolder);
         if (!f.exists()) {
             f.mkdirs();
         }
 
-
+        numRec = f.list().length;
 
         outputPath = Environment.getExternalStorageDirectory() + "/" + main_folder + "/" + voiceFolder +"/";
+        outputFile = "rec" + Integer.toString(numRec) + ".wav";
 
-
-
+        /***************************************************/
 
     }
 
