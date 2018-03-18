@@ -10,7 +10,7 @@ import android.app.Application;
 
 public class VoiceRecognition extends Application {
 
-    private String folder;
+    private String folder = "";
 
     public String getFolder(){
 

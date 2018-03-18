@@ -34,14 +34,16 @@
 
         <Button
             android:id="@+id/btn_stop_rec"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="#ff0000"
+            android:layout_gravity="center_horizontal"
             android:onClick="onClickStopRec"
             android:text="Stop"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            android:textSize="16dp"
+            android:background="@color/colorLogo"
              />
 
         <LinearLayout
@@ -57,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="@android:color/holo_green_light"
+                android:background="@color/colorPrimary"
                 android:onClick="onClickPlayRec"
                 android:text="play"
                 android:textColor="#FFFFFF"

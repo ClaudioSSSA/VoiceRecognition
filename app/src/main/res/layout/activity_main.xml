@@ -40,20 +40,29 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textAlignment="center"
-            android:text="Inserisci username"/>
+            android:text="Inserisci username"
+            android:textSize="18dp"/>
         <EditText
             android:id="@+id/user"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             />
         <Button
             android:id="@+id/confirmUser"
             android:onClick="onClickConfirmUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="OK" />
+            android:text="OK"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            />
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

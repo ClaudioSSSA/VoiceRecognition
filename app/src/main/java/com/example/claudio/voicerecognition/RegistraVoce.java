@@ -1,6 +1,7 @@
 package com.example.claudio.voicerecognition;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -59,7 +60,7 @@ public class RegistraVoce extends AppCompatActivity{
         btn_stop_rec = (Button)findViewById(R.id.btn_stop_rec);
 
         btn_stop_rec.setEnabled(false);
-        btn_stop_rec.setBackgroundColor(Color.GRAY);
+        btn_stop_rec.setBackgroundResource(R.color.colorLogoLight);
 
         /*** salvataggio voce nella cartella dell'utente ***/
 
@@ -93,14 +94,21 @@ public class RegistraVoce extends AppCompatActivity{
     public void onClickStartRec(View v){
 
         try{
-            rec = new WavRecorder(outputPath + outputFile);
-            rec.startRecording();
+            String user = ((VoiceRecognition) this.getApplication()).getFolder();
+            if(!user.equals("")) {
+                rec = new WavRecorder(outputPath + outputFile);
+                rec.startRecording();
+            }
+            else {
+                Toast.makeText(getApplicationContext(), "Inserisci username", Toast.LENGTH_LONG).show();
+                super.onBackPressed();
+            }
         }
         catch (IllegalStateException ise){}
 
 
         btn_stop_rec.setEnabled(true);
-        btn_stop_rec.setBackgroundColor(Color.RED);
+        btn_stop_rec.setBackgroundResource(R.color.colorLogo);
         crn_rec.setBase(SystemClock.elapsedRealtime());
         crn_rec.start();
 
