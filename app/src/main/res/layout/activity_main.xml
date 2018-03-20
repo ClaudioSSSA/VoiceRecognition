@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
+    android:background="@drawable/gradient"
     >
 
     <include
@@ -34,23 +35,29 @@
             android:textStyle="bold"
             android:fontFamily="@font/allerdisplay"
             android:textSize="30dp"
-            android:textColor="@android:color/holo_red_dark"/>
-        <TextView
+            android:textColor="@android:color/holo_red_dark" />
+       <!-- <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textAlignment="center"
             android:text="Inserisci username"
-            android:textSize="18dp"/>
+            android:fontFamily="@font/aller_bd"
+            android:textStyle="bold"
+            android:textColor="@color/colorLogo"
+            android:textSize="20dp"/> -->
         <EditText
             android:id="@+id/user"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_gravity="center_horizontal"
-            android:textSize="20dp"
+            android:textSize="23dp"
+            android:hint="Inserisci username"
             android:imeOptions="actionDone"
             android:singleLine="true"
+            android:background="@color/white"
+            android:textColor="@color/colorLogo"
             />
         <Button
             android:id="@+id/confirmUser"
@@ -62,6 +69,7 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
+            android:layout_marginTop="10dp"
             />
     </LinearLayout>
 
